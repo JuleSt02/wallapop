@@ -3,17 +3,16 @@ import { createUser } from "./signup-model.js";
 export const signupController = (signupForm) => {
     
     signupForm.addEventListener('submit', async (event) => {
-
-
         //prevent automatic validation in browser
         event.preventDefault();
-        console.log("preventdefault executed ")
 
-        //obtain data from form
-        const form = new FormData(signupForm)
-        const email = form.get('email')
-        const password = form.get('password')
-        const passwordConfirm = form.get('confirm-password')
+
+
+        //get data from form
+        const formData = new FormData(signupForm)
+        const email = formData.get('email')
+        const password = formData.get('password')
+        const passwordConfirm = formData.get('confirm-password')
          
         //validate email
         const emailRegex = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
@@ -25,7 +24,7 @@ export const signupController = (signupForm) => {
                     message:"Email is not valid"
                 }
             })
-            signupForm.dispatchEvent('emailError')
+            signupForm.dispatchEvent(emailError)
             return
 
         };
@@ -44,11 +43,15 @@ export const signupController = (signupForm) => {
                 
             };
 
+        //loader starts just after validation in case there are early returns
+        const startedSignup = new CustomEvent('awaitSignUp')
+        signupForm.dispatchEvent(startedSignup)
+
         try {
 
             await createUser({email, password})
                    
-            //If data is valid: inform on logn
+            //If data is valid: inform on successfull login
             const successfullSignUp = new CustomEvent('userCreated' ,{
               detail: {
                 type: "success",
@@ -61,11 +64,11 @@ export const signupController = (signupForm) => {
             setTimeout(() =>  {
                 window.location = '/'
             },1500)
-            
             signupForm.dispatchEvent(successfullSignUp)
 
-        //message of    
+        //if model throws error, ex. user already created we will display the exact error message    
         } catch(error) {
+
 
             const failedSignUp = new CustomEvent('signUpError' , {
                 detail: {
@@ -74,6 +77,10 @@ export const signupController = (signupForm) => {
                 }
             });
             signupForm.dispatchEvent(failedSignUp)
+
+        } finally {
+            const signupDone = new CustomEvent('finishSignup')
+            signupForm.dispatchEvent(signupDone)
         }
 
 

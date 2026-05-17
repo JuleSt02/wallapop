@@ -1,0 +1,126 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "description": "Lightweight work laptop",
+      "price": 850,
+      "type": "sale",
+      "image": "",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "name": "Keyboard",
+      "description": "Mechanical RGB keyboard",
+      "price": 45,
+      "type": "sale",
+      "image": "",
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "name": "Headphones",
+      "description": "Noise cancelling headphones",
+      "price": 120,
+      "type": "sale",
+      "image": "",
+      "userId": 3
+    },
+    {
+      "id": 4,
+      "name": "Desk",
+      "description": "Wooden office desk",
+      "price": 200,
+      "type": "wanted",
+      "image": "",
+      "userId": 4
+    },
+    {
+      "id": 5,
+      "name": "Chair",
+      "description": "Ergonomic desk chair",
+      "price": 95,
+      "type": "sale",
+      "image": "",
+      "userId": 5
+    },
+    {
+      "id": 6,
+      "name": "Monitor",
+      "description": "27 inch 4K monitor",
+      "price": 300,
+      "type": "sale",
+      "image": "",
+      "userId": 6
+    },
+    {
+      "id": 7,
+      "name": "Phone",
+      "description": "Latest Android smartphone",
+      "price": 650,
+      "type": "wanted",
+      "image": "",
+      "userId": 1
+    },
+    {
+      "id": 8,
+      "name": "Tablet",
+      "description": "Portable drawing tablet",
+      "price": 400,
+      "type": "sale",
+      "image": "",
+      "userId": 2
+    },
+    {
+      "id": 9,
+      "name": "Camera",
+      "description": "Compact travel camera",
+      "price": 500,
+      "type": "sale",
+      "image": "",
+      "userId": 3
+    },
+    {
+      "id": 10,
+      "name": "Mouse",
+      "description": "Wireless gaming mouse",
+      "price": 35,
+      "type": "sale",
+      "image": "",
+      "userId": 4
+    }
+  ],
+  "users": [
+    {
+      "username": "test@mail.com",
+      "password": "$2b$10$bWzMw2SCnP0l76K.ndSRjOYQPG2xsLmljJYQOEI8eOBYu8ihv1.Ja",
+      "id": 1
+    },
+    {
+      "username": "test@gmail.com",
+      "password": "$2b$10$swsiB8HcGhHCDdlwLHVr6uvAUyi3k7HZgs8kc8Ejvk/BBeM8NPVkK",
+      "id": 2
+    },
+    {
+      "username": "holi@gmail.com",
+      "password": "$2b$10$FBWA5SBk.p6Xu4EDLAJ1XO/uXujrgsB7nT4p.9wxoMWGTrQaP8tpy",
+      "id": 3
+    },
+    {
+      "username": "alexhonnold@gmail.com",
+      "password": "$2b$10$CDExtMNOlnsBZuxRWcCCcumqVNQpqD5SOtMhyYmFZsfaCYuQpdKky",
+      "id": 4
+    },
+    {
+      "username": "darkwizard@gmail.com",
+      "password": "$2b$10$CDExtMNOlnsBZuxRWcCCcumqVNQpqD5SOtMhyYmFZsfaCYuQpdKky",
+      "id": 5
+    },
+    {
+      "username": "deanpotter@gmail.com",
+      "password": "$2b$10$CDExtMNOlnsBZuxRWcCCcumqVNQpqD5SOtMhyYmFZsfaCYuQpdKky",
+      "id": 6
+    }
+  ]
+}

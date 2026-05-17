@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles/main.css">
+
+
+        <title>Post product</title>
+
+    </head>
+    <body>
+        <section class="notifications-container"></section>
+        <section class="loader-container"></section>
+        
+        <form id="create-product-form">
+
+            <label for="name">Product</label>
+            <input id="name" name="name" type="text" required>
+
+            <label for="price">Price</label>
+            <input id="price" name="price" type="number" required>
+
+            <label for="type">Type</label>
+            <select id="type" name="type">
+                <option value="sale">Sale</option>
+                <option value="wanted">Wanted</option>
+            </select>
+
+            <label for="description">Description</label>
+            <textarea
+                id="description"
+                name="description"
+                required>
+            </textarea>
+
+            <label for="image">Image URL</label>
+            <input id="image" name="image" type="text">
+
+            <button type="submit">Post product</button>
+
+        </form>
+
+        
+        <script type="module" src="create-product.js" ></script>
+    </body>
+</html>

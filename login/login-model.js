@@ -1,10 +1,13 @@
 
 
-export const createUser = async (userData) => {
+export const loginUser = async (userData) => {
+    
 
-    const url = 'http://localhost:8000/auth/register'
+    const url = 'http://localhost:8000/auth/login'
 
     const response = await fetch(url, {
+        
+
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json'
@@ -16,13 +19,14 @@ export const createUser = async (userData) => {
             password: userData.password
         })
     })
-    //get info from endpoint if the request is unsuccessfull
+
+    const data = await response.json()
+    //get info from endpoint if the request is unsuccessfull, return token i
     if (!response.ok) {
-        const data = await response.json()
-
         throw new Error(data.message)
+    } else {
 
-
+        return data.accessToken;
     }
         
      

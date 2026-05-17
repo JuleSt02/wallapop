@@ -7,89 +7,19 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <style>
-            .product {
-                border-radius: 2px black;
-                border-radius:10px;
-                background-color: rgb(248, 242, 242); 
-                padding: 0.70rem;
-                font-family:Arial, Helvetica, sans-serif;
-                font-size:1rem;
-
-            }
-
-
-            .loader {
-            height: 60px;
-            aspect-ratio: 1;
-            position: relative;
-            }
-            .loader::before,
-            .loader::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: 50%;
-            transform-origin: bottom;
-            }
-        .loader::after {
-        background:
-            radial-gradient(at 75% 15%,#fffb,#0000 35%),
-            radial-gradient(at 80% 40%,#0000,#0008),
-            radial-gradient(circle  5px,#fff 94%,#0000),
-            radial-gradient(circle 10px,#000 94%,#0000),
-            linear-gradient(#F93318 0 0) top   /100% calc(50% - 5px),
-            linear-gradient(#fff    0 0) bottom/100% calc(50% - 5px)
-            #000;
-        background-repeat: no-repeat;
-        animation: l20 1s infinite cubic-bezier(0.5,120,0.5,-120);
-        }
-        .loader::before {
-        background:#ddd;
-        filter: blur(8px);
-        transform: scaleY(0.4) translate(-13px, 0px);
-        }
-        @keyframes l20 { 
-        30%,70% {transform:rotate(0deg)}
-        49.99%  {transform:rotate(0.2deg)}
-        50%     {transform:rotate(-0.2deg)}
-        }
-
-        .hidden {
-            display:none
-        }
-
-     .notifications-container {
-      position: absolute;
-      top: 5rem;
-      left: 1rem;
-    }
-
-        .notification {
-            border: solid 2px lightgrey;
-            border-radius: 10px;
-            padding: 0.5rem;
-            font-weight: bold;
-            color: white;
-        }
-                .notification.error {
-                    background-color:red;
-                
-                
-                }
-                .notification.success {
-                    background-color:greenyellow;
-                    
-                }
-   
-        </style>
+        <link rel="stylesheet" href="./styles/main.css">
     </head>
     <body>
         <header>
             <nav>
-                <a href="/signup.html">Signup</a>
-                <a href="login.html">Login</a>
+                <section class="universalView">
+                     <a href="/signup.html">Signup</a>
+                     <a href="login.html">Login</a>
+                </section>
+                <section id="authView" class="authView hidden">
+                    <a href="create-product.html">Create product</a> 
+                </section>
+                
             </nav>
         </header>
         <h1>Products</h1>
